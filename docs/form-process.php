@@ -15,14 +15,14 @@ if (isset($_POST['email'])) {
 
     // validation expected data exists
     if (
-        !isset($_POST['fullName']) ||
+        !isset($_POST['name']) ||
         !isset($_POST['email']) ||
         !isset($_POST['message'])
     ) {
         problem('Oh looks like there is some problem with your form data.');
     }
 
-    $name = $_POST['fullName']; // required
+    $name = $_POST['name']; // required
     $email = $_POST['email']; // required
     $message = $_POST['message']; // required
 
