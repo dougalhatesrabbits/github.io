@@ -47,8 +47,8 @@
       <div class="wrap">
         <h2>How we can help</h2>
         <div class="tabs" role="tablist" aria-label="Choose customer type">
-          <button role="tab" id="t-home" aria-selected="true" aria-controls="p-home" data-tab="home">For home</button>
-          <button role="tab" id="t-biz" aria-selected="false" aria-controls="p-biz" data-tab="biz">For business</button>
+          <button type="button" role="tab" id="t-home" aria-selected="true" aria-controls="p-home" data-tab="home">For home</button>
+          <button type="button" role="tab" id="t-biz" aria-selected="false" aria-controls="p-biz" data-tab="biz">For business</button>
         </div>
         <div class="panel" id="p-home" role="tabpanel" aria-labelledby="t-home" data-panel="home">
           <p><strong>Tech trouble at home? We'll get it sorted.</strong></p>
@@ -111,8 +111,8 @@
       <div class="wrap">
         <h2>Pricing at a glance</h2>
         <div class="tabs" role="tablist" aria-label="Pricing type">
-          <button role="tab" id="pt-home" aria-selected="true" aria-controls="pp-home" data-tab="home">Home</button>
-          <button role="tab" id="pt-biz" aria-selected="false" aria-controls="pp-biz" data-tab="biz">Business</button>
+          <button type="button" role="tab" id="pt-home" aria-selected="true" aria-controls="pp-home" data-tab="home">Home</button>
+          <button type="button" role="tab" id="pt-biz" aria-selected="false" aria-controls="pp-biz" data-tab="biz">Business</button>
         </div>
         <div class="panel scroll" id="pp-home" role="tabpanel" aria-labelledby="pt-home" data-panel="home">
           <table>
@@ -243,8 +243,8 @@
         </div>
         <div>
           <form id="f" action="form-process.php" method="POST">
-            <label>Your name<input id="n" name="name" autocomplete="name" required></label>
-            <label>Email or phone<input id="e" name="contact" autocomplete="email" required></label>
+            <label>Your name<input id="n" type="text" name="name" autocomplete="name" required></label>
+            <label>Email or phone<input id="e" type="email" name="contact" autocomplete="email" required></label>
             <label>What do you need?<select id="topic">
                 <option>Home repair or support</option>
                 <option>Home visit</option>
