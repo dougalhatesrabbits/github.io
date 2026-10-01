@@ -16,20 +16,20 @@ if (isset($_POST['email'])) {
     // validation expected data exists
     if (
         !isset($_POST['name']) ||
-        !isset($_POST['email']) ||
+        !isset($_POST['contact']) ||
         !isset($_POST['message'])
     ) {
         problem('Oh looks like there is some problem with your form data.');
     }
 
     $name = $_POST['name']; // required
-    $email = $_POST['email']; // required
+    $email = $_POST['contact']; // required
     $message = $_POST['message']; // required
 
     $error_message = "";
     $email_exp = '/^[A-Za-z0-9._%-]+@[A-Za-z0-9.-]+\.[A-Za-z]{2,4}$/';
 
-    if (!preg_match($email_exp, $email)) {
+    if (!preg_match($email_exp, $contact)) {
         $error_message .= 'Email address does not seem valid.<br>';
     }
 
@@ -56,7 +56,7 @@ if (isset($_POST['email'])) {
     }
 
     $email_message .= "Name: " . clean_string($name) . "\n";
-    $email_message .= "Email: " . clean_string($email) . "\n";
+    $email_message .= "Email: " . clean_string($contact) . "\n";
     $email_message .= "Message: " . clean_string($message) . "\n";
 
     // create email headers
